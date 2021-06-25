@@ -1,0 +1,241 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+body
+{
+    overflow-x: hidden;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+.container-fluid
+{
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    width: 100%;
+}
+
+.navigation
+{
+
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: black;
+    transition: 0.5s;
+    overflow: hidden;
+    left: 0px;
+    z-index: 1111;
+}
+
+.navigation .active
+{
+    width: 60px;
+
+}
+
+.navigation ul
+{
+    margin-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li
+{
+    position:relative;
+    width:100% ;
+    list-style: none;
+    transition: all 0.5s;    
+}
+
+.navigation ul li:hover
+{
+    background: green;
+    margin-left: 20px;
+}
+
+
+.navigation ul li:nth-child(1)
+{
+    margin-bottom: 20px;
+}
+
+.navigation ul li:nth-child(1):hover
+{
+    margin-left: 0px;
+    background: transparent;
+}
+
+.navigation ul li a
+{
+    text-decoration: none;
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    color: aliceblue;
+}
+
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.navigation ul li:nth-child(1):hover a .icon .fab
+{
+    color: green;
+}
+
+.navigation ul li:hover a .icon .fab,
+.navigation ul li:hover a .icon .fas
+{
+    color: black;
+}
+
+.navigation ul li a .icon .fab,
+.navigation ul li a .icon .fas
+{
+    color: green;
+    font-size: 30px;
+}
+
+.navigation ul li a .title
+{
+    font-size: 1.3em;
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space:nowrap ;
+}
+
+
+
+/*  */
+.main
+{
+    position:absolute;
+    width: calc(100% - 300px);
+    left:300px ;
+    min-height: 100vh;
+    background: #26383D;
+    transition: 0.5s;
+}
+
+.main .topbar
+{
+    width: 100%;
+    background: #262626;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    height: 80px;
+}
+
+
+.toggle .fas
+{
+    font-size: 40px;
+    margin-top: 20px;
+    margin-left: 10px;
+    position: absolute;
+    color: green;
+}
+
+.appname .title
+{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    float: left;
+    margin-top: 15px;
+    margin-left: 60px;
+}
+
+.appname .title .fab
+{
+    font-size: 30px;
+    color: green;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+.user
+{
+    margin-right: 30px;
+    font-size: 40px;
+    color: green;
+    display: inline;
+    float:right;
+}
+
+/* side bar toggle */
+/* #check
+{
+    display: none; 
+    position: absolute;
+}
+
+label #select, label #cancel
+{
+    position: absolute;
+    cursor: pointer;
+}
+
+label #select
+{
+    left: 20px;
+    top: 50px;
+    font-size: 35px;
+    color: aquamarine;
+    z-index: 0;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+label #cancel
+{
+    color: aquamarine;
+    
+    z-index: 1111;
+    left: -250px;
+    top: 50px;
+    font-size: 30px;
+    transition: 0.3s;
+
+} */
+
+/* after check */
+/* #check:checked ~ .navigation
+{
+    left:0px;
+
+}
+
+#check:checked ~ .main
+{
+    left:300px;
+
+}
+#check:checked ~ label #select
+{
+    z-index: -1;
+}
+
+#check:checked ~ label #cancel
+{
+    left: 250px;
+    width: calc(100%-300px) ;
+} */
