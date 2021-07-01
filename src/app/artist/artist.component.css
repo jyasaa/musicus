@@ -1,0 +1,52 @@
+.artist .row .col
+{
+    margin: 20px;
+}
+
+.artist .card
+{
+    background-color: #191717;
+    border: none;
+    outline: none;
+}
+
+.artist .card img
+{
+    box-shadow: 5px 5px 20px black;
+    
+}
+
+.artist .card img:hover
+{
+    box-shadow: 10px 10px 30px black;
+}
+
+.artist .card .card-body
+{
+    color: white;
+}
+
+.artist .card .card-body h5 span
+{
+    color: green;
+}
+
+
+
+.album-cards .card
+{
+    background-color: #191717;
+    border: none;
+    outline: none;
+}
+
+.album-cards .card .card-body
+{
+    color: white;
+} 
+
+.album-cards .card a
+{
+    color: green;
+    
+}
