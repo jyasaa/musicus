@@ -1,0 +1,29 @@
+.album .card,
+.tracks .card
+{
+    background-color: #191717;
+    color: white;
+}
+
+/* .tracks .row
+{
+    height: 200px;
+} */
+
+.album h3 span
+{
+    color: green;
+}
+
+.tracks .col-md-5
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    
+}
+.tracks .col-md-5 .name h5
+{
+    text-overflow: ellipsis;
+}

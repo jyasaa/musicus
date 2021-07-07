@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class SpotifyService {
 
-  private authKey='Bearer BQA6glGmvNrSfvTxz5fpDnjy4df0dHVYMWNd9jQDwuh7SEIudYT1_vQLydrKouFi7KSCZ8hyUSUSERgXnvIys_AuEIJ45GGvqodIrrfDUoAIV3rvkiQ8ycMHfj2LBdXuZNMaKtzh1kNE1sYYr2z-sMhutB6vHQU';
+  private authKey='Bearer BQC3VDHU2Y2y3mkZCtzZt9s71j_dbcfrLLHn0ojHHraujLfoOvFpm_QobmSv4lX8iyHXe4yjF8q1Ng1PPjMST8ScD7RiALvWIOojHlLLVTdJ5d2unMQ44DRhNx8lXKMGVNN_ir-CDH4cyGbJimL--c6i2Gb-b04';
   
   private clientId='f905b5083d3d45d1ba85be30450610e9';
 
