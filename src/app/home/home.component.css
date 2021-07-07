@@ -1,0 +1,94 @@
+/* *
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+body
+{
+    overflow: hidden;
+}
+
+.welcome-text
+{
+    color: black;
+}
+.welcome-text h1
+{
+    font-size: 50px;
+}
+.welcome-text h2
+{
+    font-size: 40px;
+}
+
+.welcome-text h2 span
+{
+    color: green;
+}
+.welcome-text h2 span span
+{
+    color:beige;
+}
+
+.welcome-text .search-bar
+{
+    margin-top: 20px;
+    position: relative;
+    align-items: center;
+    background-color: black;
+    width: 550px;
+    border-radius: 25px;
+}
+.welcome-text .search-bar input
+{
+    width: 500px;
+    height: 50px ;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding-left: 30px;
+    background-color: black;
+    color: green;
+    text-transform: capitalize;
+}
+
+.welcome-text .search-bar .fas
+{
+    color: red;
+}
+
+/* artists */
+.artist
+{
+    margin-top: 30px;
+}
+.artist .row .col
+{
+    margin: 20px;
+}
+
+.artist .card
+{
+    background-color: #191717;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+.artist .card:hover
+{
+    background-color: #292626;
+}
+
+
+.artist .card .card-body
+{
+    color: white;
+}
+.artist .card .card-body a
+{
+    color: green;
+    text-decoration: none;
+}
