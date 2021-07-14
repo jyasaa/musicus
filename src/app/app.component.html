@@ -1,67 +1,53 @@
-
-
-
 <div class="container-fluid">
     <!-- <input type="checkbox" name="" id="check">
             <label for="check">
                 <i class="fas fa-bars" id="select"></i>
                 <i class="fas fa-times" id="cancel"></i>
             </label> -->
-    <div class="navigation">
-        <ul>
-            <li>
-                <a href="">
-                    <span class="icon"><i class="fab fa-spotify"></i></span>
-                    <span class="title"><h2>Music<span style="color: green;" >US</span> </h2></span>
-                </a>
-            </li>
-            <li>
-                <a routerLink="home"   routerLinkActive="active">
-                    <span class="icon"><i class="fas fa-home"></i></span>
-                    <span class="title">Home</span>
-                </a>
-            </li>
-            <li>
-                <a routerLink="search"  routerLinkActive="active">
-                    <span class="icon"><i class="fas fa-search"></i></span>
-                    <span class="title">Search</span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <span class="icon"><i class="fab fa-spotify"></i></span>
-                    <span class="title">Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <span class="icon"><i class="fab fa-spotify"></i></span>
-                    <span class="title">Dashboard</span>
-                </a>
-            </li>
-        </ul>
-    </div>
+            <div class="navbar">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn" >
+                    <i class="fas fa-bars"></i>
+                </label>
+                <div class="navbar-logo">
+                    <a href="">
+                        <span class="icon"><i class="fab fa-spotify"></i></span>
+                        <span class="title">
+                            <h2 style="color: white;" >Music<span style="color: green;">US</span> </h2>
+                        </span>
+                    </a>
+                </div>
+                <div class="navbar-options">
+                    <ul>
+                        <li>
+                            <a routerLink="search" routerLinkActive="active">
+                                <span class="icon"><i class="fas fa-home"></i></span>
+                                <span class="title">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="home" routerLinkActive="active">
+                                <span class="icon"><i class="fas fa-search"></i></span>
+                                <span class="title">Search</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="aboutus" routerLinkActive="active">
+                                <span class="icon"><i class="fas fa-info"></i></span>
+                                <span class="title">About Us</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
 
     <div class="main">
-        
-        <div class="topbar">
-            
-            
-            
-            <div class="searchbar">
-                <input type="text">
-                <i class="fas fa-search"></i>
-            </div>
 
-
-            <div class="user">
-                <i class="fas fa-user-circle"></i>
-            </div>
-        </div> 
 
         <div class="content">
             <router-outlet></router-outlet>
         </div>
     </div>
 </div>
-
