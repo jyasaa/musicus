@@ -2,6 +2,8 @@
 {
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
 
@@ -19,253 +21,166 @@ body
     width: 100%;
 }
 
-.navigation
-{
-
-    position: fixed;
-    width: 300px;
-    height: 100%;
-    background: black;
-    transition: 0.5s;
-    overflow: hidden;
-    left: 0px;
-    z-index: 1111;
-}
-
-.navigation .active
-{
-    width: 60px;
-
-}
-
-.navigation ul
-{
-    margin-top: 30px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.navigation ul li
-{
-    position:relative;
-    width:100% ;
-    list-style: none;
-    transition: all 0.5s;
-}
-
-.navigation ul li:hover
-{
-    background: green;
-    margin-left: 20px;
-}
-
-
-.navigation ul li:nth-child(1)
-{
-    margin-bottom: 20px;
-}
-
-.navigation ul li:nth-child(1):hover
-{
-    margin-left: 0px;
-    background: transparent;
-}
-
-.navigation ul li a
-{
-    text-decoration: none;
-    position: relative;
-    display: block;
-    width: 100%;
+.navbar{
     display: flex;
-    color: aliceblue;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    z-index: 1000;
 }
 
-.navigation ul li a .icon
-{
-    position: relative;
-    display: block;
-    min-width: 60px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
+.navbar .navbar-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+
 }
 
-.navigation ul li:nth-child(1):hover a .icon .fab
-{
+.navbar .navbar-logo a{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.navbar .navbar-logo a .icon{
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.navbar .navbar-logo a .icon i{
+    font-size: 40px;
     color: green;
+    margin-right: 0px;
 }
 
-.navigation ul li:hover a .icon .fab,
-.navigation ul li:hover a .icon .fas
-{
+.navbar .navbar-options{
+    width: 60%;
+    height: 50px;
+    
+}
+.navbar .navbar-options ul{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.navbar .navbar-options ul li{
+    padding: 10px 15px;
+    font-size: 18px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+
+.navbar .navbar-options ul li a{
+    color: green;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.navbar .navbar-options ul li:hover {
+    background-color: green;
+}
+.navbar .navbar-options ul li:hover a{
     color: black;
 }
 
-.navigation ul li a .icon .fab,
-.navigation ul li a .icon .fas
-{
-    color: green;
+.navbar .navbar-options ul li a i{
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+
+.checkbtn{
     font-size: 30px;
+    color: green;
+    position: fixed;
+    right: 30px;
+    cursor: pointer;
+    visibility: hidden;
 }
 
-.navigation ul li a .title
-{
-    font-size: 1.3em;
-    position: relative;
-    display: block;
-    padding: 0 10px;
-    height: 60px;
-    line-height: 60px;
-    white-space:nowrap ;
+#check{
+    display: none;
+}
+
+/* responsive part */
+
+@media(max-width: 950px){
+    .checkbtn{
+        visibility: visible;
+    }
+
+    .navbar .navbar-user{
+        margin-right: 80px;
+    }
+
+    .navbar .navbar-options{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #26383D;
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.3s;
+    }
+
+    .navbar .navbar-options ul {
+       flex-direction: column;
+       margin-top: 40px;
+    }
+
+    .navbar .navbar-options ul li{
+        margin-top: 30px;
+        font-weight:500;
+        background-color: #26383D ;
+
+    }
+    .navbar .navbar-options ul li:hover{
+        background:none;
+    }
+    .navbar .navbar-options ul li:hover a{
+        background: none;
+        color:black; 
+    }
+
+    #check:checked ~ .navbar-options{
+        left: 0;
+    }
 }
 
 
+@media(max-width: 700px){
+    .navbar .navbar-user{
+        padding: 8px 15px;
+        font-size: 12px;
 
-/*  */
+    }
+    .navbar .navbar-user a{
+        font-size: 12px;
+        font-weight: 400;
+        padding: 1px 5px;
+    }
+}
+
+
 .main
 {
-    position:absolute;
-    width: calc(100% - 300px);
-    left:300px ;
+    width: 100%;
     min-height: 100vh;
     background: #26383D;
+    padding: 30px;
 }
 
 .main .content
 {
-    padding: 100px;
+    margin: 80px 100px;
 }
 
-.main .topbar
-{
-    width: 100%;
-    background: #26383D;
-    display: flex;
-    /* justify-content: space-between; */
-    justify-content:flex-end;
-    align-items:center; 
-    height: 80px;
-}
-
-
-
-
-.searchbar
-{
-    background-color: #397754;
-    display: flex;
-    flex-direction: row;
-    float: right;
-    margin-right: 50px;
-    cursor: pointer;
-    border-radius: 20px;
-    padding-left: 30px;
-    padding-right: 20px;
-} 
-
-.searchbar .fas
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-
-}
-
-.searchbar input
-{
-    background-color: #397754;
-    height: 40px;
-    width: 200px;
-    display: flex;
-    flex-direction: row;
-    float: right;
-    border: none;
-    outline: none;
-    border-style: none;
-    transition: 0.2s;
-    padding-left: 20px;
-} 
-.searchbar input:focus
-{
-    width: 300px;
-}
-
-/* .appname .title .fab
-{
-    font-size: 30px;
-    color: green;
-    margin-right: 5px;
-    margin-top: 2px;
-} */
-
-.user
-{
-    margin-right: 30px;
-    font-size: 40px;
-    color: green;
-    display: inline;
-    float:right;
-} 
-
-/* side bar toggle */
-/* #check
-{
-    display: none;
-    position: absolute;
-}
-
-label #select, label #cancel
-{
-    position: absolute;
-    cursor: pointer;
-}
-
-label #select
-{
-    left: 20px;
-    top: 50px;
-    font-size: 35px;
-    color: aquamarine;
-    z-index: 0;
-    transition: 0.5s;
-    z-index: 2;
-}
-
-label #cancel
-{
-    color: aquamarine;
-
-    z-index: 1111;
-    left: -250px;
-    top: 50px;
-    font-size: 30px;
-    transition: 0.3s;
-
-} */
-
-/* after check */
-/* #check:checked ~ .navigation
-{
-    left:0px;
-
-}
-
-#check:checked ~ .main
-{
-    left:300px;
-
-}
-#check:checked ~ label #select
-{
-    z-index: -1;
-}
-
-#check:checked ~ label #cancel
-{
-    left: 250px;
-    width: calc(100%-300px) ;
-} */

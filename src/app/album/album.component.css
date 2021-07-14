@@ -23,7 +23,8 @@
     padding: 20px;
     
 }
-.tracks .col-md-5 .name h5
+.tracks .col-md-5 .name h3
 {
+    margin-left: 30px;
     text-overflow: ellipsis;
 }

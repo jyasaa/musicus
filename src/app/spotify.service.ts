@@ -7,22 +7,22 @@ import { Observable } from 'rxjs';
 })
 export class SpotifyService {
 
-  private authKey='Bearer BQC3VDHU2Y2y3mkZCtzZt9s71j_dbcfrLLHn0ojHHraujLfoOvFpm_QobmSv4lX8iyHXe4yjF8q1Ng1PPjMST8ScD7RiALvWIOojHlLLVTdJ5d2unMQ44DRhNx8lXKMGVNN_ir-CDH4cyGbJimL--c6i2Gb-b04';
-  
-  private clientId='f905b5083d3d45d1ba85be30450610e9';
+  private authKey = 'Bearer BQBsKcNC7TPCUL3JInzRi4h-yu10CK40nWZmYm5XTy8pFXKiG-dvYv7ECfjUsP2x7siSbmwcrmkz4emKxf8rGZaktR1AEDzyuIu8TQvNGOcgnrO2T72Fx0tBJkybSi8vPyIskf1XMXh39F9Mgg_2WY4O5mhQ1qI';
 
-  private clientSecret='a8d1cdf7d31348ceb8950f463ffb5187';
- 
-  constructor(private ht:HttpClient) {  }
+  private clientId = 'f905b5083d3d45d1ba85be30450610e9';
+
+  private clientSecret = 'a8d1cdf7d31348ceb8950f463ffb5187';
+
+  constructor(private ht: HttpClient) { }
 
 
 
-  private httpOptions={
-    headers:new HttpHeaders({
+  private httpOptions = {
+    headers: new HttpHeaders({
 
-      'Accept':'application.json',
+      'Accept': 'application.json',
       'Content-Type': 'application/json',
-      'Authorization':this.authKey
+      'Authorization': this.authKey
     })
   }
 
@@ -31,45 +31,45 @@ export class SpotifyService {
 
   //   return this.ht.get<any>(authUrl,)
   // }
- 
-  
-  getAllArtists(searchQuery):Observable<any>{
-  //   const headers = {
-  //     Authorization: 'Bearer ' + authToken,
-  // };
-    let url= `https://api.spotify.com/v1/search?q=${searchQuery}&type=artist&limit=5`
 
-    return this.ht.get<any>(url,this.httpOptions);
+
+  getAllArtists(searchQuery): Observable<any> {
+    //   const headers = {
+    //     Authorization: 'Bearer ' + authToken,
+    // };
+    let url = `https://api.spotify.com/v1/search?q=${searchQuery}&type=artist&limit=5`
+
+    return this.ht.get<any>(url, this.httpOptions);
 
   }
 
-  getArtist(artistId):Observable<any>{
+  getArtist(artistId): Observable<any> {
 
     let artistURL = `https://api.spotify.com/v1/artists/${artistId}`;
 
-    return this.ht.get<any>(artistURL,this.httpOptions);
+    return this.ht.get<any>(artistURL, this.httpOptions);
 
   }
 
   //getting albums of artist
-  getAllAlbums(artistId):Observable<any>{
+  getAllAlbums(artistId): Observable<any> {
 
-    let albumURL= `https://api.spotify.com/v1/artists/${artistId}/albums`
+    let albumURL = `https://api.spotify.com/v1/artists/${artistId}/albums`
 
-    return this.ht.get<any>(albumURL,this.httpOptions)
+    return this.ht.get<any>(albumURL, this.httpOptions)
   }
 
   //get album
-  getAlbum(albumId):Observable<any>{
-    let albmuURL= `https://api.spotify.com/v1/albums/${albumId}`;
-    return this.ht.get<any>(albmuURL,this.httpOptions)
+  getAlbum(albumId): Observable<any> {
+    let albmuURL = `https://api.spotify.com/v1/albums/${albumId}`;
+    return this.ht.get<any>(albmuURL, this.httpOptions)
   }
 
   //get All tracks
 
-  getTracks(albumId):Observable<any>{
+  getTracks(albumId): Observable<any> {
 
     let tracksURL = `https://api.spotify.com/v1/albums/${albumId}/tracks`;
-    return this.ht.get<any>(tracksURL,this.httpOptions)
+    return this.ht.get<any>(tracksURL, this.httpOptions)
   }
 }

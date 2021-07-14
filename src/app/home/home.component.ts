@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms'
+import { Router } from '@angular/router';
 import { SpotifyService } from '../spotify.service';
 
 @Component({
@@ -12,7 +14,7 @@ export class HomeComponent implements OnInit {
   public searchArtist : string;
   public artists
 
-  constructor(private ss: SpotifyService) { }
+  constructor(private ss: SpotifyService , private router:Router) { }
 
   ngOnInit(): void {
     // this.ss.getAuth().subscribe(

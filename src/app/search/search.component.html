@@ -1,1 +1,77 @@
-<p>search works!</p>
+<div class="welcome-text">
+    <h1>Hello!</h1>
+    <h2>Looking for some cool <span>m<span>us</span>ic</span> ??</h2>
+    <h2>Don't worry we got this ;) </h2>
+</div>
+
+<div class="artist">
+
+    <div class="card mb-3" style="width: 100%;" *ngFor="let artist of artistsanirudh" >
+        <div class="row g-0">
+          <div class="col-md-2" *ngIf="artist.images.length" >
+            <img src="{{artist.images[1].url}}"  style="padding: 10px;" class="img-fluid rounded-start" alt="Image is not available">
+          </div>
+          <div class="col-md-2" *ngIf="!artist.images.length" >
+            <img src="https://www.pngitem.com/pimgs/m/493-4931443_border-squares-square-shadow-shadows-ftestickers-png-white.png"  style="padding: 10px;" class="img-fluid rounded-start" alt="Image is not available">
+          </div>
+          <div class="col-md-10">
+            <div class="card-body">
+              <a routerLink="{{artist.id}}"><h5 class="card-title">{{artist.name}}</h5></a>
+              <p>Followers : {{artist.followers.total}}</p>
+              <p>Genres:
+                <span class="badge bg-success m-1 text-dark" *ngFor="let genre of artist.genres" style="font-size: 15px; font-weight: 5em;" >{{genre}}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+</div>
+
+<div class="artist">
+
+  <div class="card mb-3" style="width: 100%;" *ngFor="let artist of artiststhaman" >
+      <div class="row g-0">
+        <div class="col-md-2" *ngIf="artist.images.length" >
+          <img src="{{artist.images[1].url}}"  style="padding: 10px;" class="img-fluid rounded-start" alt="Image is not available">
+        </div>
+        <div class="col-md-2" *ngIf="!artist.images.length" >
+          <img src="https://www.pngitem.com/pimgs/m/493-4931443_border-squares-square-shadow-shadows-ftestickers-png-white.png"  style="padding: 10px;" class="img-fluid rounded-start" alt="Image is not available">
+        </div>
+        <div class="col-md-10">
+          <div class="card-body">
+            <a routerLink="{{artist.id}}"><h5 class="card-title">{{artist.name}}</h5></a>
+            <p>Followers : {{artist.followers.total}}</p>
+            <p>Genres:
+              <span class="badge bg-success m-1 text-dark" *ngFor="let genre of artist.genres" style="font-size: 15px; font-weight: 5em;" >{{genre}}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+</div>
+
+<div class="artist">
+
+  <div class="card mb-3" style="width: 100%;" *ngFor="let artist of artistsdevi" >
+      <div class="row g-0">
+        <div class="col-md-2" *ngIf="artist.images.length" >
+          <img src="{{artist.images[1].url}}"  style="padding: 10px;" class="img-fluid rounded-start" alt="Image is not available">
+        </div>
+        <div class="col-md-2" *ngIf="!artist.images.length" >
+          <img src="https://www.pngitem.com/pimgs/m/493-4931443_border-squares-square-shadow-shadows-ftestickers-png-white.png"  style="padding: 10px;" class="img-fluid rounded-start" alt="Image is not available">
+        </div>
+        <div class="col-md-10">
+          <div class="card-body">
+            <a routerLink="{{artist.id}}"><h5 class="card-title">{{artist.name}}</h5></a>
+            <p>Followers : {{artist.followers.total}}</p>
+            <p>Genres:
+              <span class="badge bg-success m-1 text-dark" *ngFor="let genre of artist.genres" style="font-size: 15px; font-weight: 5em;" >{{genre}}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+</div>
